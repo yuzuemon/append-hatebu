@@ -21,7 +21,7 @@
 		css.position = 'fixed';
 		css.bottom = '0px';
 		css.right = '0px';
-		css.zIndex = 9999;
+		css.zIndex = 10001;
 
 		// Add link
 		var a = d.createElement('a');
