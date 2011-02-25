@@ -15,7 +15,7 @@
 
 		var d = document;
 		var div = d.createElement('div');
-		div.setAttribute('id', 'hateblock');
+		div.setAttribute('id', 'append-hatebu');
 		d.body.appendChild(div);
 		var css = div.style;
 		css.position = 'fixed';
