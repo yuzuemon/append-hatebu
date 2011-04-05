@@ -1,5 +1,6 @@
 ﻿// ==UserScript==
 // @name		append-hatebu.user.js
+// @namespace	http://d.hatena.ne.jp/Yuzuemon/
 // @include		http://*
 // ==/UserScript==
 
@@ -7,7 +8,7 @@
 	if(parent === window){
 		var url = location.href;
 		var hatena = {
-			entry: 'http://b.hatena.ne.jp/entry/',
+			entry: 'http://b.hatena.ne.jp/entry',
 			image: 'http://b.hatena.ne.jp/entry/image/',
 			append: 'http://b.hatena.ne.jp/images/append.gif'
 			}
@@ -15,7 +16,7 @@
 
 		var d = document;
 		var div = d.createElement('div');
-		div.setAttribute('id', 'append-hatebu');
+		div.setAttribute('id', 'hateblock');
 		d.body.appendChild(div);
 		var css = div.style;
 		css.position = 'fixed';
@@ -25,7 +26,7 @@
 
 		// Add link
 		var a = d.createElement('a');
-		a.setAttribute('href', hatena.entry + url);
+		a.setAttribute('href', hatena.entry + '?mode=more&url=' + url);
 		a.setAttribute('target', '_blank');
 		div.appendChild(a);
 		// Add image in the link
